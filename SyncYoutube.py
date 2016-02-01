@@ -5,7 +5,7 @@ import os
 playlist = [];
 def download():
 	br = mech.Browser()
-	br.open("https://www.youtube.com/channel/UCAgL0A1YpVwVwxQkSaWToUQ")  #Add the chanel link whose playlists you want to sync to local
+	br.open("Add the link here")  #Add the youtube link containing playlists you want to sync to local
 	for link in br.links():
 		url_title = ""
 		if (link.url).startswith ("/playlist?list"):
