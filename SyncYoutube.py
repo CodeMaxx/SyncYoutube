@@ -7,7 +7,7 @@ import simplejson as json
 playlistIds = []
 titles = []
 
-def getVideoId():
+def getPlaylistId():
 	data = {}
 	data['maxRequest'] = '50'
 	data['channelId'] = 'UCtESv1e7ntJaLJYKIO1FoYw'
@@ -32,5 +32,5 @@ def download():
 			subprocess.call(url_down, shell=True)
 			os.chdir("..")
 
-getVideoId()
+getPlaylistId()
 download()
