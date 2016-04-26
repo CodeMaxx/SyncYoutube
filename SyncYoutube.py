@@ -10,7 +10,7 @@ titles = []
 def getPlaylistId():
 	data = {}
 	data['maxResults'] = '50'
-	data['channelId'] = 'UCtESv1e7ntJaLJYKIO1FoYw' // Put the channelId of channel you want to Sync to.
+	data['channelId'] = 'UCtESv1e7ntJaLJYKIO1FoYw' # Put the channelId of channel you want to Sync to.
 	data['part'] = 'snippet'
 	data['key'] = 	'AIzaSyAngcF6oKnyEbhk3KyL9Wz1OhSi28JjbzE'
 	requestValues = urlparse.urlencode(data)
