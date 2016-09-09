@@ -3,6 +3,7 @@ import os
 import urllib.request as urlreq
 import urllib.parse as urlparse
 import simplejson as json
+import sys
 
 playlistIds = []
 titles = []
@@ -10,7 +11,7 @@ titles = []
 def getPlaylistId():
 	data = {}
 	data['maxResults'] = '50'
-	data['channelId'] = 'UCtESv1e7ntJaLJYKIO1FoYw' # Put the channelId of channel you want to Sync to.
+	data['channelId'] = sys.argv[1].split('/')[-1]
 	data['part'] = 'snippet'
 	data['key'] = 	'AIzaSyAngcF6oKnyEbhk3KyL9Wz1OhSi28JjbzE'
 	requestValues = urlparse.urlencode(data)
@@ -28,7 +29,7 @@ def download():
 			if not os.path.exists(title):
 				os.makedirs(title)
 			os.chdir("./" + title)
-			url_down = "youtube-dl -o '%(title)s' " + url
+			url_down = "youtube-dl --no-check-certificate -o '%(title)s' " + url
 			subprocess.call(url_down, shell=True)
 			os.chdir("..")
 
