@@ -29,7 +29,7 @@ def download():
 			if not os.path.exists(title):
 				os.makedirs(title)
 			os.chdir("./" + title)
-			url_down = "youtube-dl --no-check-certificate -o '%(title)s' " + url
+			url_down = "youtube-dl -o '%(title)s' " + url
 			subprocess.call(url_down, shell=True)
 			os.chdir("..")
 
