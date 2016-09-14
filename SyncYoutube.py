@@ -13,7 +13,7 @@ def getPlaylistId():
 	data['maxResults'] = '50'
 	data['channelId'] = sys.argv[1].split('/')[-1]
 	data['part'] = 'snippet'
-	data['key'] = 	'AIzaSyAngcF6oKnyEbhk3KyL9Wz1OhSi28JjbzE'
+	data['key'] = 	'__put__your__key__here__' # Put youtube api key here
 	requestValues = urlparse.urlencode(data)
 	request = "https://www.googleapis.com/youtube/v3/playlists?" + requestValues
 	string = urlreq.urlopen(request).read().decode('utf-8')
