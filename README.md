@@ -24,6 +24,9 @@ Install instructions for **youtube-dl** -> [Install youtube-dl](https://github.c
 ### Usage
 `python SyncYoutube.py <link to the youtube channel>`
 
+For e.g.:<br>
+`python SyncYoutube.py https://www.youtube.com/channel/UCyp1gCHZJU_fGWFf2rtMkCg`
+
 ## Credits
 [Akash Trehan](https://github.com/CodeMaxx)
 

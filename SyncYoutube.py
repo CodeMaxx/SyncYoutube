@@ -1,3 +1,5 @@
+#! /usr/local/bin/python
+
 import subprocess
 import os
 import urllib.request as urlreq
